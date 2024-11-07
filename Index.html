@@ -5,7 +5,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.min.css" />
     <script src="bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
+    <style>
+      /* stylle background  */
+      .bgcustom {
+        background-color: #fff7f7;
+      }
+      .bgcustom1 {
+        background-color: #aca9ff;
+      }
+    </style>
+
     <title>LatihanTugasBsdanJs</title>
   </head>
-  <body></body>
+  <body style="background-color: #deddff">
+    <div class="container-fluid">
+      <div class="container my-5">
+        <div class="row">
+          <div class="col-6 bgcustom">
+            <!-- titel -->
+            <h1 class="fw-bold fs-1 pt-5 ms-lg-5">Login</h1>
+            <p class="ms-lg-5 mb-5" style="color: #4877be">Inputkan Username & password!!</p>
+            <!-- akhir titel -->
+            <!-- grup baris  -->
+            <div class="mb-5 ms-5 d-flex">
+              <hr class="w-25 border-0" style="border-top: 6px solid" />
+              <p class="ms-3 me-3 text-success">Form</p>
+              <hr class="w-25 border-0" style="border-top: 6px solid" />
+            </div>
+            <!-- akhir baris  -->
+            <!-- grup form -->
+            <div class="ms-3 pb-4">
+              <form action="" method="post" class="ms-5">
+                <!-- username -->
+                <label for="Username" class="fw-bold d-block">Username*</label>
+                <input type="text" id="Username" required class="w-50 border-0 mb-4 ps-3" style="background-color: #d9d9d9; height: 40px; border-radius: 10px" />
+                <!-- akhir username -->
+                <!-- password -->
+                <label for="Password" class="fw-bold d-block">Password*</label>
+                <input type="password" required id="Password" class="w-50 border-0 mb-4 ps-3" style="background-color: #d9d9d9; height: 40px; border-radius: 10px" />
+                <!-- akhir password -->
+                <!-- buton -->
+                <button type="button" class="d-block border-0 w-50 mb-5 mt-2 text-white fw-bold" style="background-color: #6d66ff; height: 40px; border-radius: 10px">Login</button>
+                <!-- akhir buton -->
+              </form>
+            </div>
+            <!-- akhir grup form -->
+            <p class="ms-5 mb-lg-5 fw-lighter" style="color: #747272">Dibuat oleh Irpan Maulana dengan ❤️</p>
+          </div>
+          <!-- left side -->
+          <div class="col-6 bgcustom1 d-flex justify-content-center align-items-center">
+            <div class="">
+              <h1 class="fs-1 text-uppercase" style="color: #7c7f5e">Wellcome <span class="d-block fs-1 text-uppercase" style="color: #7c7f5e">To Page Login</span></h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
