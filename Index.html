@@ -45,14 +45,16 @@
                 <input type="password" required id="Password" class="w-50 border-0 mb-4 ps-3" style="background-color: #d9d9d9; height: 40px; border-radius: 10px" />
                 <!-- akhir password -->
                 <!-- buton -->
-                <button type="button" class="d-block border-0 w-50 mb-5 mt-2 text-white fw-bold" style="background-color: #6d66ff; height: 40px; border-radius: 10px">Login</button>
+                <button onclick="Login()" type="button" class="d-block border-0 w-50 mb-5 mt-2 text-white fw-bold" style="background-color: #6d66ff; height: 40px; border-radius: 10px">Login</button>
                 <!-- akhir buton -->
               </form>
+              <!-- jika password dan username salah-->
+              <p id="Pesan" class="error-message ms-5 text-danger fst-italic" style="display: none">Maaf, username atau password salah!</p>
             </div>
             <!-- akhir grup form -->
             <p class="ms-5 mb-lg-5 fw-lighter" style="color: #747272">Dibuat oleh Irpan Maulana dengan ❤️</p>
           </div>
-          <!-- left side -->
+          <!-- right side -->
           <div class="col-6 bgcustom1 d-flex justify-content-center align-items-center">
             <div class="">
               <h1 class="fs-1 text-uppercase" style="color: #7c7f5e">Wellcome <span class="d-block fs-1 text-uppercase" style="color: #7c7f5e">To Page Login</span></h1>
@@ -61,5 +63,19 @@
         </div>
       </div>
     </div>
+    <script>
+      function Login() {
+        const username = document.getElementById("Username").value;
+        const password = document.getElementById("Password").value;
+        const errorMessage = document.getElementById("Pesan");
+        errorMessage.style.display = "none";
+
+        if (username == "Irpan" && password == 123) {
+          window.location.href = "Dashboard.html";
+        } else {
+          errorMessage.style.display = "block";
+        }
+      }
+    </script>
   </body>
 </html>
