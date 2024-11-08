@@ -37,15 +37,45 @@
         <div class="row">
           <!-- fullscreen -->
           <div class="col-6">
-            <button type="button" class="fw-bold border-0 w-50 mt-4" style="height: 42px; border-radius: 10px">Fullscreen</button>
+            <button onclick="openFullscreen()" type="button" class="fw-bold border-0 w-50 mt-4" style="height: 42px; border-radius: 10px">Fullscreen</button>
           </div>
           <!-- exit fullscreen -->
           <div class="col-6">
-            <button type="button" class="fw-bold border-0 w-50 mt-4" style="height: 42px; border-radius: 10px">Exit Fullscreen</button>
+            <button onclick="closeFullscreen()" type="button" class="fw-bold border-0 w-50 mt-4" style="height: 42px; border-radius: 10px">Exit Fullscreen</button>
           </div>
         </div>
+        <div class="row"><p class="fw-light text-white mt-3 fst-italic">Tip: kamu bisa menggunakan esc untuk keluar dari fullscreen</p></div>
       </div>
     </div>
     <!-- akhir fullscreen -->
+    <!-- sscript fullscreen -->
+    <script>
+      let elem = document.documentElement;
+      function openFullscreen() {
+        if (elem.requestFullscreen) {
+          elem.requestFullscreen();
+        } else if (elem.mozRequestFullScreen) {
+          // untuk firefox
+          elem.mozRequestFullScreen();
+        } else if (elem.webkitRequestFullscreen) {
+          //  untuk chrome
+          elem.webkitRequestFullscreen();
+        } else if (elem.msRequestFullscreen) {
+          // untuk ie edge
+          elem = window.top.document.body;
+          elem.msRequestFullscreen();
+        }
+      }
+
+      // close fullscreen
+      function closeFullscreen() {
+        if (document.exitFullscreen) {
+          document.exitFullscreen();
+        } else if (document.exitFullscreen) {
+          // hanya untuk chrome
+          document.webkitExitFullscreen();
+        }
+      }
+    </script>
   </body>
 </html>
